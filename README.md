@@ -1,9 +1,26 @@
-# Image classification of abnormalities in the gastrointestinal tract
-## TDT4173 Machine Learning - Group project
+
+----
+
+<div align="center">
+
+<p align="center">
+
+<h1> TDT4173 Project Assignment </h1>
+
+
+<h1> A comparison of KNN and CNN for image classification </h1>
+
+<h2> KNN Implementation </h2>
+
+</p>
+
+</div>
+
+----
 
 This is the public repository for our project in TDT4173 Machine Learning at NTNU, fall 2020.
 
-The project uses the [Kvasir](https://datasets.simula.no/kvasir/) v2 dataset.
+The project uses the [Kvasir](https://datasets.simula.no/kvasir/) v2 dataset, which contains images from the gastrointestinal tract.
 
 The included two notebooks are intended for use on Google Colab, but should be easily adjustable to run in local environments..
 
