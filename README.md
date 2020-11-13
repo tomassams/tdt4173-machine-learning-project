@@ -41,9 +41,9 @@ To run the notebook in Google Colab, click "Open in Colab" at the top of the not
 |       |-- polyps
 |       |-- ulcerative-colitis
 |    |-- processed                  <- Raw dataset split into train/test (will be populated by the notebook)
-|    |-- zip                        <- Original zip file with the dataset (will be populated by the notebook)
 |       |-- train
 |       |-- test
+|    |-- zip                        <- Original zip file with the dataset (will be populated by the notebook)
 |-- results                         <- Folder containing prediction results and evaluation
 |    |-- knn_pixel_intensity
 |       |-- knn_pixel_intensity_confusion_matrix.png
