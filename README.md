@@ -1,10 +1,17 @@
-# tdt4173-machine-learning-project
+# Image classification of abnormalities in the gastrointestinal tract
+## TDT4173 Machine Learning - Group project
 
 This is the public repository for our project in TDT4173 Machine Learning at NTNU, fall 2020.
 
-The included notebook is intended for use on Google Colab, but should be adjustable to run in local environments with a few tweaks in case of issues.
+The project uses the [Kvasir](https://datasets.simula.no/kvasir/) v2 dataset.
 
-All packages should be pre-installed in the Colab notebook. You might need to pip install some packages if you run the notebook in a local or different environment.
+The included two notebooks are intended for use on Google Colab, but should be easily adjustable to run in local environments..
+
+All packages should be pre-installed in the Colab notebook. If you need to run the notebook locally or elsewhere, all package requirements can be installed based on ```requirements.txt```. It is recommended that you do this inside a virtualenv or conda environment to avoid issues with existing packages.
+
+```bash
+pip install requirements.txt
+```
 
 To run the notebook in Google Colab, click "Open in Colab" at the top of the notebook.
 
@@ -13,15 +20,17 @@ To run the notebook in Google Colab, click "Open in Colab" at the top of the not
 ```txt
 |-- LICENSE.md
 |-- README.md                       <- The file you are reading now
-|-- project_notebook.ipynb          <- Notebook containing code used in the project
+|-- requirements.txt                <- List of python package dependencies
+|-- project_notebook_knn.ipynb      <- Notebook containing KNN code used in the project
+|-- project_notebook_cnn.ipynb      <- Notebook containing CNN code used in the project
 |-- models                          <- Folder containing persisted models
 |    |-- knn_pixel_intensity.pkl
 |    |-- knn_color_histogram.pkl
-|    |-- cnn_simple.h5
-|    |-- cnn_resnet_tl.h5
-|    |-- cnn_resnet_tl_tuned.h5
-|-- data
-|    |-- raw                        <- Folder containing the dataset (will be populated by the notebook)
+|    |-- cnn_simple.hdf5
+|    |-- cnn_resnet_tl.hdf5
+|    |-- cnn_resnet_tl_tuned.hdf5
+|-- data                            <- Folder containing the dataset (will be populated by the notebook)
+|    |-- raw
 |       |-- dyed-lifted-polyps
 |       |-- dyed-resection-margins
 |       |-- esophagitis
@@ -30,27 +39,45 @@ To run the notebook in Google Colab, click "Open in Colab" at the top of the not
 |       |-- normal-z-line
 |       |-- polyps
 |       |-- ulcerative-colitis
+|    |-- processed                  <- Raw dataset split into train/test (will be populated by the notebook)
+|    |-- zip                        <- Original zip file with the dataset (will be populated by the notebook)
+|       |-- train
+|       |-- test
 |-- results                         <- Folder containing prediction results and evaluation
 |    |-- knn_pixel_intensity
+|       |-- knn_pixel_intensity_confusion_matrix.png
+|       |-- knn_pixel_intensity_classification_report.csv
+|       |-- knn_pixel_intensity_gridsearch_report.csv
 |    |-- knn_color_histogram
 |    |-- cnn_simple
 |    |-- cnn_resnet_tl
 |    |-- cnn_resnet_tl_tuned
 ```
 
-## Loading persisted models
+## Installing dependencies
+Run the following command in your command line tool of choice:
 
-Note that these require that your input data matches the shapes the models are trained on.
+```bash
+pip install requirements.txt
+```
 
-See the notebook for preprocessing and feature extraction steps.
+## Loading trained models
+
+All the trained models were persisted after training, and can be re-loaded into Sklearn or Keras to try them out yourself. Preprocessing steps can be found in the Colab notebook.
 
 ### KNN
 
 ```python
 import pickle
 
-loaded_model = pickle.load(open('./models/knn_pixel_intensity.pkl', 'rb'))
-# loaded_model.predict(x_test)
+# Replace with desired model path
+model_path = 'models/knn_pixel_intensity.pkl'
+
+# Load
+loaded_model = pickle.load(open(model_path, 'rb'))
+
+# Predict on data
+loaded_model.predict(x_test)
 ```
 
 ### CNN
@@ -58,6 +85,12 @@ loaded_model = pickle.load(open('./models/knn_pixel_intensity.pkl', 'rb'))
 ```python
 from tensorflow import keras
 
-loaded_model = keras.models.load_model('simple_cnn.h5')
-# loaded_model.predict(x_test)
+# Replace with desired model path
+model_path = 'models/simple_cnn.hdf5'
+
+# Load
+loaded_model = keras.models.load_model(model_path)
+
+# Predict on data
+loaded_model.predict(x_test)
 ```
