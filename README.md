@@ -9,10 +9,6 @@ The included two notebooks are intended for use on Google Colab, but should be e
 
 All packages should be pre-installed in the Colab notebook. If you need to run the notebook locally or elsewhere, all package requirements can be installed based on ```requirements.txt```. It is recommended that you do this inside a virtualenv or conda environment to avoid issues with existing packages.
 
-```bash
-pip install requirements.txt
-```
-
 To run the notebook in Google Colab, click "Open in Colab" at the top of the notebook.
 
 ## Project structure
