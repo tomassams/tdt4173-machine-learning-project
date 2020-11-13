@@ -2,9 +2,8 @@
 ----
 
 # TDT4173 Project Assignment
-
-##  Comparison of KNN and CNN for image classification in the gastrointestinal tract
-
+## Image classification in the gastrointestinal tract
+## Comparison of KNN and CNN
 ----
 
 This is the public repository for our project in TDT4173 Machine Learning at NTNU, fall 2020.
