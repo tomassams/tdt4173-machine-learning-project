@@ -1,20 +1,9 @@
 
 ----
 
-<div align="center">
+# TDT4173 Project Assignment
 
-<p align="center">
-
-<h1> TDT4173 Project Assignment </h1>
-
-
-<h1> A comparison of KNN and CNN for image classification </h1>
-
-<h2> KNN Implementation </h2>
-
-</p>
-
-</div>
+##  Comparison of KNN and CNN for image classification
 
 ----
 
