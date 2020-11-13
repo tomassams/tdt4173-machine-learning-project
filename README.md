@@ -3,7 +3,7 @@
 
 # TDT4173 Project Assignment
 
-##  Comparison of KNN and CNN for image classification
+##  Comparison of KNN and CNN for image classification in the gastrointestinal tract
 
 ----
 
