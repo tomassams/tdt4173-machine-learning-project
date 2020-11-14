@@ -1,0 +1,17 @@
+rank;iteration;param-metric;param-n-neighbors;param-weights;mean-test-score;std-test-score
+1;11;manhattan;5;distance;0.6777;0.0122
+2;13;manhattan;11;distance;0.6763;0.0093
+3;15;manhattan;19;distance;0.676;0.0092
+4;9;manhattan;3;distance;0.6742;0.0111
+5;10;manhattan;5;uniform;0.6737;0.0153
+6;8;manhattan;3;uniform;0.6722;0.0134
+7;12;manhattan;11;uniform;0.6712;0.0082
+8;14;manhattan;19;uniform;0.6708;0.0107
+9;7;euclidean;19;distance;0.6615;0.0176
+10;5;euclidean;11;distance;0.6582;0.0154
+11;6;euclidean;19;uniform;0.656;0.0191
+12;3;euclidean;5;distance;0.653;0.0181
+13;2;euclidean;5;uniform;0.6505;0.0193
+14;4;euclidean;11;uniform;0.6475;0.0145
+15;1;euclidean;3;distance;0.6395;0.0154
+16;0;euclidean;3;uniform;0.6362;0.0143
