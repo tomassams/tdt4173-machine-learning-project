@@ -59,7 +59,7 @@ To run the notebook in Google Colab, click "Open in Colab" at the top of the not
 Run the following command in your command line tool of choice:
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Loading trained models
