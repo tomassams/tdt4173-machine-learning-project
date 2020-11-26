@@ -16,7 +16,7 @@ All packages should be pre-installed in the Colab notebook. If you need to run t
 
 To run the notebook in Google Colab, click "Open in Colab" at the top of the notebook.
 
-## CNN visualization (extra)
+## CNN visualization
 
 We built a website to show how the CNN model process features in an image. 
 
